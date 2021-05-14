@@ -96,42 +96,39 @@ dog = Dog('Juchka')
 #         print('All aboard. Moving to next station.')
 
 #
-# class Whiskey:
-#
-#     def __init__(self, name, whiskey_type='Single mold'):
-#         self.name = name
-#         self.whiskey_type = whiskey_type
-#
-#     def __add__(self, other: str):
-#         if other == 'Cola':
-#             return 'Cubalibre'
-#         elif other == 'Apple juice':
-#             return 'Whiskey sour'
-#
-#     def __str__(self):
-#         return self.whiskey_type
-#
-#     def __repr__(self):
-#         # return {'name': self.name, 'type': self.whiskey_type}
-#         return f"Name: {self.name}, type: {self.whiskey_type}"
-#
-#     def __lt__(self, other):
-#         if self.name == 'Jameson' and other.name == 'Jim Beam':
-#             return 'Jameson'
-#         else:
-#             return 'Drink vodka!'
+class Whiskey:
+
+    def __init__(self, name, whiskey_type='Single mold'):
+        self.name = name
+        self.whiskey_type = whiskey_type
+
+    def __add__(self, other):
+        if isinstance(other, Whiskey):
+            return 'Jameson'
+        else:
+            return 'Drink vodka!'
+
+    def __str__(self):
+        return self.whiskey_type
+
+    def __repr__(self):
+        # return {'name': self.name, 'type': self.whiskey_type}
+        return f"Name: {self.name}, type: {self.whiskey_type}"
+
+    def __lt__(self, other):
+        if isinstance(other, Whiskey):
+            return 'Jameson'
+        else:
+            return 'Drink vodka!'
 
 
-# jim_beam = Whiskey()
-# cocktail = jim_beam + 'Cola'
 # print(cocktail)
 # cocktail = jim_beam + 'Apple juice'
 # print(cocktail)
 
 #
-# whiskey_obj1 = Whiskey('Jameson')
-# whiskey_obj2 = Whiskey('Jim Beam')
-#
-# print(whiskey_obj2 < whiskey_obj1)
+whiskey_obj1 = Whiskey('Jameson')
+whiskey_obj2 = Whiskey('Jim Beam')
 
-
+print(whiskey_obj1 + whiskey_obj2)
+print(whiskey_obj1 + 'Jim Beam')
