@@ -83,8 +83,6 @@ from functools import wraps
 #
 
 
-
-
 # @repeat_capitalized_name(times=3)
 # def get_fullname(firstname, lastname):
 #     """
@@ -121,14 +119,18 @@ from functools import wraps
 #         return func_wrapper
 #     return capitalize_names
 
-# def decorator_name(f):
-#     @wraps(f)
-#     def decorated(*args, **kwargs):
-#         return f(*args, **kwargs)
-#     return decorated
+def decorator_name(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        print(f.__name__)
+        return f(*args, **kwargs)
+    return decorated
 
-import time
 
-begin = time.time()
-end = time.time()
-print(end - begin)
+@decorator_name
+def hello_world():
+    print("hello_world")
+
+hello_world()
+
+
