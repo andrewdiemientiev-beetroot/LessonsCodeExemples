@@ -22,7 +22,7 @@ Class also should have ability to:
 * Let out guests if night came (If it's 11:00pm or later).
 * Put every one to sleep, which fast-forward time to 8:00 am.
 
-For clocks use build in library **time**. 
+For clocks use build in library **datetime**. 
 
 ## Validation
 
