@@ -8,10 +8,10 @@ Create user interface with console to use all this methods.
 
 ## Requirements
 Class house should contain arguments:
-* family
-* guests
-* is_locked
-* clock
+* family : List
+* guests : List
+* is_locked : Bool
+* clock : datetime.time
 
 Class also should have ability to:
 * Let in one or several people of the family.
