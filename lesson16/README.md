@@ -4,6 +4,7 @@
 Write a program that simulates life in house. It means that there will be a family that owns this house. House also can 
 visit other people. They should be registered and they should be in the house all the time. Also if all members of the 
 house will exit it the house should be locked. Also the house have clocks in it and each action takes exactly an hour.
+Create user interface with console to use all this methods.
 
 ## Requirements
 Class house should contain arguments:
