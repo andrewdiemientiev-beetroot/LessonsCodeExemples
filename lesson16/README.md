@@ -30,7 +30,7 @@ For clocks use build in library **datetime**.
 * House should not contain any guests after 11:00 pm.
 * Guests allowed to be in the house if only one our several members of family in the house.
 * Guests allowed to be in the house only from 8:00 am till 11:00 pm.
-* People name should contain Name and Surname written in title.
+* People name should contain Name and/or Surname written in title.
 * People name should not contain numbers or symbols in it, only letters and whitespaces.
 
 
