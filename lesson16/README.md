@@ -38,7 +38,7 @@ For clocks use build in library **datetime**.
 People should be presented as a separate class called **Person**.
 Each person should contain name, age and type (Family/Guest)
 
-** Additional validation for task with *
+#### Additional validation for task with * 
 * If if there are only children in house, guests are not allowed to be in house.
 * Elder members of family should not go out from house starting from 9:00 pm if they have child or children.
 * There should be at least one member of family with children if they are in house.
