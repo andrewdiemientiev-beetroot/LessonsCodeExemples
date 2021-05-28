@@ -53,32 +53,31 @@ def kitty():
 # speak_func = get_speak_func('I want vacation!', 1)
 # print(speak_func())
 
-l1 = []
-for i in range(10):
-    l1.append(i**2)
-print(l1)
-
-l2 = list(map(lambda x: x**2, range(10)))
-print(l2)
-
-
 def even_nums(x):
     return x % 2 == 0
-
-
-input_values = [123, 32, 22, 5, 10, 3]
 
 # for i in map(even_nums, input_values):
 #     print(i)
 
 
-filtered_list = list(filter(even_nums, input_values))
-
-print(filtered_list)
-
-
 from functools import reduce
 
 
-a = reduce(lambda x, y: x-y, input_values)
-print(a)
+print(__name__)
+
+
+if __name__ == '__main__':
+    input_values = [123, 32, 22, 5, 10, 3]
+    l1 = []
+    for i in range(10):
+        l1.append(i ** 2)
+    print(l1)
+
+    l2 = list(map(lambda x: x ** 2, range(10)))
+    print(l2)
+
+    a = reduce(lambda x, y: x - y, input_values)
+    print(a)
+    filtered_list = list(filter(even_nums, input_values))
+
+    print(filtered_list)
