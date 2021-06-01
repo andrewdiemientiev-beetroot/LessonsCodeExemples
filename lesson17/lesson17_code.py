@@ -50,8 +50,17 @@ import unittest
 
 class TestStringMethods(unittest.TestCase):
 
+    def setUp(self):
+        self.battery = Battery()
+        self.battery.discharge()
+
     def test_upper(self):
-        self.assertEqual('foo'.upper(), 'FOO')  # assert 'foo'.upper() == 'FOO'
+        self.assertTrue(self.battery.charge_level in range(90, 100))  # assert 'foo'.upper() == 'FOO'
+
+    def test_negative(self):
+        self.battery.charge_level = 'some sting'
+        with self.assertRaises(TypeError):
+            self.battery.discharge()
 
     def test_isupper(self):
         self.assertTrue('FOO'.isupper())  # assert True
@@ -67,3 +76,5 @@ class TestStringMethods(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
