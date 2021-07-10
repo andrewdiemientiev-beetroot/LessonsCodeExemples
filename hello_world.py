@@ -1,10 +1,20 @@
-def is_palindrome(looking_str: str, index: int = 0) -> bool:
-    revers_index=(len(looking_str)-(index+len(looking_str)+1))
-    if index == round(len(looking_str)/2):
-        return True
-    elif looking_str[index] == looking_str[revers_index]:
-        return is_palindrome(looking_str, index+1)
-    else:
-        return False
+def first_word(text: str) -> str:
+    """
+        returns the first word in a given text.
+    """
+    return text
 
-print(is_palindrome('фыфыфs'))
+
+if __name__ == '__main__':
+    print("Example:")
+    print(first_word("Hello world"))
+
+    # These "asserts" are used for self-checking and not for an auto-testing
+    assert first_word("Hello world") == "Hello"
+    assert first_word(" a word ") == "a"
+    assert first_word("don't touch it") == "don't"
+    assert first_word("greetings, friends") == "greetings"
+    assert first_word("... and so on ...") == "and"
+    assert first_word("hi") == "hi"
+    assert first_word("Hello.World") == "Hello"
+    print("Coding complete? Click 'Check' to earn cool rewards!")

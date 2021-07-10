@@ -47,11 +47,11 @@ if __name__ == '__main__':
 # количество процессов CPUCore * 2
 
 
-def prostie_chisla(n, k):
-    pros_chisla = []
-    for number in range(n, k+1):
-        for devider in range(2,k):
-            if number % devider == 0:
-                break
-        else:
-            pros_chisla.append(number)
+    def prostie_chisla(n, k):
+        pros_chisla = []
+        for number in range(n, k+1):
+            for devider in range(2,k):
+                if number % devider == 0:
+                    break
+            else:
+                pros_chisla.append(number)
