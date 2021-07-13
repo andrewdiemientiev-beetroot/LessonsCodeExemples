@@ -28,13 +28,12 @@ if __name__ == '__main__':
                 "https://appdb.winehq.org/index.php",
                 "https://reyestr.court.gov.ua/Review/96673802",
                 "https://habr.com/ru/post/46598/",
-                # "https://lurkmore.to/Python",
                 "https://htmlacademy.ru/blog/boost/frontend/git-console",
                 "https://tproger.ru/articles/cool-linux-commands/",
                 "https://runestone.academy/runestone/books/published/pythonds/Introduction/InputandOutput.html",
                 "https://itproger.com/news/5-sovetov-dlya-nachinayushtih-programmistov",
                 "https://realpython.com/what-can-i-do-with-python/"
-            ] * 100
+            ] * 20
     start_time = time.time()
     download_all_sites(sites)
     duration = time.time() - start_time
